@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【TUAD生限定】世界のクリエイティブを東北へ｜ポートランド現地リサーチプロジェクト メンバー公募</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;800;900&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --lime: #ccff00;
+    --orange: #ff5500;
+    --cobalt: #0038ff;
+    --magenta: #ff007a;
+    --cream: #f4efe6;
+    --charcoal: #121314;
+    --white: #ffffff;
+    --border-dark: 3px solid #121314;
+    --shadow-pop: 5px 5px 0px #121314;
+    --shadow-pop-lg: 8px 8px 0px #121314;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Zen Kaku Gothic New', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* Neo-Brutalist Layout Utility */
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  .tag {
+    display: inline-block;
+    background: var(--lime);
+    color: var(--charcoal);
+    border: var(--border-dark);
+    box-shadow: 3px 3px 0px var(--charcoal);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    padding: 6px 16px;
+    text-transform: uppercase;
+    transform: rotate(-1.5deg);
+  }
+  .tag.orange { background: var(--orange); color: #fff; }
+  .tag.blue { background: var(--cobalt); color: #fff; }
+  .tag.magenta { background: var(--magenta); color: #fff; }
+
+  /* Hero Section */
+  header.hero {
+    background: var(--cobalt);
+    border-bottom: var(--border-dark);
+    color: #fff;
+    padding: 90px 0 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .hero-title {
+    font-family: 'Syne', 'Zen Kaku Gothic New', sans-serif;
+    font-size: clamp(34px, 5.5vw, 62px);
+    font-weight: 900;
+    line-height: 1.15;
+    color: #fff;
+    margin: 20px 0 24px;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+  }
+  .hero-title span {
+    background: var(--lime);
+    color: var(--charcoal);
+    padding: 0 10px;
+    display: inline-block;
+    box-shadow: 4px 4px 0px var(--charcoal);
+  }
+  .hero-lead {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.8;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border: 2px solid rgba(255,255,255,0.4);
+    border-radius: 8px;
+    margin-bottom: 28px;
+  }
+  .hero-meta-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .meta-badge {
+    background: var(--white);
+    color: var(--charcoal);
+    border: var(--border-dark);
+    box-shadow: var(--shadow-pop);
+    padding: 8px 16px;
+    font-weight: 900;
+    font-size: 14px;
+  }
+  .hero-img-box {
+    position: relative;
+  }
+  .hero-img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border: var(--border-dark);
+    box-shadow: var(--shadow-pop-lg);
+    border-radius: 12px;
+    transform: rotate(2deg);
+  }
+  .hero-sticker {
+    position: absolute;
+    bottom: -15px;
+    left: -15px;
+    background: var(--orange);
+    color: #fff;
+    border: var(--border-dark);
+    box-shadow: 4px 4px 0 var(--charcoal);
+    padding: 12px 20px;
+    font-weight: 900;
+    font-size: 16px;
+    transform: rotate(-4deg);
+  }
+
+  /* Marquee */
+  .marquee {
+    background: var(--lime);
+    border-bottom: var(--border-dark);
+    padding: 12px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+  }
+  .marquee-content {
+    display: inline-block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--charcoal);
+    letter-spacing: 0.1em;
+    animation: scrollText 22s linear infinite;
+  }
+  @keyframes scrollText {
+    from { transform: translateX(0%); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* Section Common */
+  section { padding: 80px 0; border-bottom: var(--border-dark); }
+  .sec-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .sec-title {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-top: 10px;
+  }
+
+  /* Pop Cards */
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .pop-card {
+    background: var(--white);
+    border: var(--border-dark);
+    box-shadow: var(--shadow-pop);
+    border-radius: 12px;
+    padding: 30px 24px;
+    position: relative;
+    transition: transform 0.15s ease;
+  }
+  .pop-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: var(--shadow-pop-lg);
+  }
+
+  /* Visual Photo Section */
+  .photo-card {
+    background: var(--white);
+    border: var(--border-dark);
+    box-shadow: var(--shadow-pop);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .photo-wrap {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: var(--border-dark);
+  }
+  .photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  .photo-card:hover .photo-wrap img {
+    transform: scale(1.05);
+  }
+  .photo-body {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .photo-badge {
+    align-self: flex-start;
+    background: var(--charcoal);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 900;
+    padding: 3px 8px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+  }
+
+  /* Role Cards */
+  .role-num {
+    font-family: 'Outfit', sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--orange);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .role-title {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 10px;
+  }
+  .role-task {
+    font-size: 13.5px;
+    background: var(--cream);
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 2px solid var(--charcoal);
+    margin-bottom: 14px;
+    font-weight: 700;
+  }
+  .role-skills {
+    font-size: 13px;
+    color: #444;
+  }
+
+  /* Cost & Safety Banner */
+  .impact-box {
+    background: var(--lime);
+    border: var(--border-dark);
+    box-shadow: var(--shadow-pop-lg);
+    border-radius: 14px;
+    padding: 40px;
+    margin: 40px 0;
+  }
+  .impact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+    align-items: center;
+  }
+
+  /* Timeline */
+  .timeline-step {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    background: var(--white);
+    border: var(--border-dark);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 0 var(--charcoal);
+    align-items: center;
+  }
+  .step-date {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    background: var(--charcoal);
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
+
+  /* CTA Button */
+  .cta-block {
+    background: var(--charcoal);
+    color: #fff;
+    text-align: center;
+    padding: 80px 24px;
+    border-top: var(--border-dark);
+    position: relative;
+  }
+  .btn-entry {
+    display: inline-block;
+    background: var(--lime);
+    color: var(--charcoal);
+    font-size: 24px;
+    font-weight: 900;
+    text-decoration: none;
+    padding: 20px 48px;
+    border: var(--border-dark);
+    box-shadow: 6px 6px 0 var(--orange);
+    border-radius: 12px;
+    margin-top: 24px;
+    transition: all 0.15s ease;
+    cursor: pointer;
+  }
+  .btn-entry:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0 var(--orange);
+    background: #ddff33;
+  }
+
+  @media (max-width: 860px) {
+    .hero-grid, .grid-3, .grid-2, .impact-grid { grid-template-columns: 1fr; }
+    .hero-img { height: 260px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Hero Header -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="tag">TUAD 美大生 渡航リサーチメンバー 5名公募</div>
+        <h1 class="hero-title">
+          授業で学んだあの街<br>
+          <span>PORTLAND</span> で<br>
+          未来の火種を掴め。
+        </h1>
+        <p class="hero-lead">
+          全学共通必修「芸術平和学」で触れた、世界が注目するクリエイティブ都市・ポートランド。<br>
+          専攻の壁を越えた6名チームで現地へ渡航し、街・建築・ZINE・コミュニティの仕組みを丸ごと体験取材する実践型プロジェクト！
+        </p>
+        <div class="hero-meta-badges">
+          <div class="meta-badge">📅 渡航：2027年2月下旬〜3月上旬（5泊7日）</div>
+          <div class="meta-badge" style="background: var(--lime);">💰 自己負担目標：約11万円</div>
+          <div class="meta-badge">👥 募集：学部生5名（選抜制）</div>
+        </div>
+      </div>
+      <div class="hero-img-box">
+        <img class="hero-img" src="https://images.unsplash.com/photo-1502175353174-a7a70e73b362?auto=format&fit=crop&w=1000&q=80" alt="Portland Oregon USA Cityscape">
+        <div class="hero-sticker">🌲 HELLO, YOUR WORLD!</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Marquee Strip -->
+<div class="marquee">
+  <div class="marquee-content">
+    RESEARCH & EXPERIMENT IN PORTLAND 2027 ★ COMMUNITY DESIGN ★ SUSTAINABLE ARCHITECTURE ★ RISOGRAPH & ZINES ★ PUBLIC ART ★ JOIN THE CREW ★ TUAD PROJECT ★ 
+    RESEARCH & EXPERIMENT IN PORTLAND 2027 ★ COMMUNITY DESIGN ★ SUSTAINABLE ARCHITECTURE ★ RISOGRAPH & ZINES ★ PUBLIC ART ★ JOIN THE CREW ★ TUAD PROJECT ★ 
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- なぜ行くのか？ 3つの探求軸 -->
+  <section>
+    <div class="sec-header">
+      <div class="tag orange">WHY PORTLAND?</div>
+      <h2 class="sec-title">なぜ、いまポートランドなのか？</h2>
+      <p style="font-size: 15px; color: #555; margin-top: 8px;">山形・東北の課題と直結する「3つの視点」を武器に街へ飛び込みます。</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="pop-card">
+        <div style="font-size: 36px; margin-bottom: 12px;">🎨</div>
+        <h3 style="font-size: 20px; font-weight: 900; margin-bottom: 10px;">クリエイティブ経済の循環</h3>
+        <p style="font-size: 13.5px; color: #444;">
+          個人の作り手やアーティストが妥協せず自立し、地域内でお金が循環するマーケット・出版カルチャーのエコシステムを解剖。
+        </p>
+      </div>
+      <div class="pop-card">
+        <div style="font-size: 36px; margin-bottom: 12px;">🤝</div>
+        <h3 style="font-size: 20px; font-weight: 900; margin-bottom: 10px;">住民主体のまちづくり</h3>
+        <p style="font-size: 13.5px; color: #444;">
+          市民が単なる「消費者」ではなく「街の共作者」になる仕組み。パブリックアート推進や流域コミュニティの合意形成を調査。
+        </p>
+      </div>
+      <div class="pop-card">
+        <div style="font-size: 36px; margin-bottom: 12px;">🌱</div>
+        <h3 style="font-size: 20px; font-weight: 900; margin-bottom: 10px;">空間・資源のリノベーション</h3>
+        <p style="font-size: 13.5px; color: #444;">
+          築100年超の古倉庫を最先端の環境共生型オフィスへ。古い街並みをクリエイティブ拠点として蘇らせる空間デザインを体感。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 現地で巡る刺激的な視察スポット -->
+  <section>
+    <div class="sec-header">
+      <div class="tag blue">FIELDWORK SITES</div>
+      <h2 class="sec-title">五感をフル稼働させるリサーチ拠点</h2>
+      <p style="font-size: 15px; color: #555; margin-top: 8px;">教科書で見るだけでは終わらない、一次情報の宝庫へ。</p>
+    </div>
+
+    <div class="grid-2">
+      <!-- Spot 1 -->
+      <div class="photo-card">
+        <div class="photo-wrap">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8QNJQqWfEohtCw3PbSjC7UsfHY65jAPX5Il0kNwrAEHE1qHJMeWUNvwzceK6KMt3sQcdNCmjf67ItvQ4OuE_uT6FqcJjKPzwkvBo5f83sCr_gd2otoOeX8fcn-tP46_atK_FtZsE5HOgi/s960/IMG_4248.jpg" alt="Pearl District Warehouse Renovation">
+        </div>
+        <div class="photo-body">
+          <div class="photo-badge">建築・環境 / 空間再生</div>
+          <h3 style="font-size: 18px; font-weight: 900; margin-bottom: 6px;">エコトラスト・ビル ＆ パール地区</h3>
+          <p style="font-size: 13px; color: #555; margin-bottom: 12px;">
+            1895年の倉庫を環境配慮型（LEEDゴールド）へ大改修。社会的企業が集まり経済が回り続けるリノベーション空間の実態を調査。
+          </p>
+        </div>
+      </div>
+
+      <!-- Spot 2 -->
+      <div class="photo-card">
+        <div class="photo-wrap">
+          <img src="https://res.cloudinary.com/dragonspell/images/w_1440,h_864,c_fill,dpr_auto,fl_progressive:steep,f_auto/w_1440,h_864/v1634240655/www.travelportland.com/cropped-PSU_FarmersMarket_Leah-Nash/cropped-PSU_FarmersMarket_Leah-Nash.jpg" alt="Outdoor Craft Market">
+        </div>
+        <div class="photo-body">
+          <div class="photo-badge">企画構想 / コミュニティ</div>
+          <h3 style="font-size: 18px; font-weight: 900; margin-bottom: 6px;">ポートランド・サタデー・マーケット</h3>
+          <p style="font-size: 13px; color: #555; margin-bottom: 12px;">
+            全米最長級の常設アウトドアマーケット。個人クラフト作家が継続して収益を生み出せる出店エコシステムの秘密に迫る。
+          </p>
+        </div>
+      </div>
+
+      <!-- Spot 3 -->
+      <div class="photo-card">
+        <div class="photo-wrap">
+          <img src="https://images.unsplash.com/photo-1547890316-3bb90edb9004?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Street Art and Murals">
+        </div>
+        <div class="photo-body">
+          <div class="photo-badge">美術 / パブリックアート</div>
+          <h3 style="font-size: 18px; font-weight: 900; margin-bottom: 6px;">アルバータ・アート地区 ＆ 壁画群</h3>
+          <p style="font-size: 13px; color: #555; margin-bottom: 12px;">
+            衰退していたストリートがアートの介入でどう再生したのか？ 合法的な壁画カルチャーと地域コミュニティの共存を体感。
+          </p>
+        </div>
+      </div>
+
+      <!-- Spot 4 -->
+      <div class="photo-card">
+        <div class="photo-wrap">
+          <img src="https://assets.st-note.com/production/uploads/images/195054/picture_pc_c80d857a6771486bd499d7d51ac95a83.jpg?width=2000&height=2000&fit=bounds&quality=85" alt="Independent Bookstore and Zine Culture">
+        </div>
+        <div class="photo-body">
+          <div class="photo-badge">グラフィック / 出版</div>
+          <h3 style="font-size: 18px; font-weight: 900; margin-bottom: 6px;">IPRC ＆ パウエルズ・ブックス</h3>
+          <p style="font-size: 13px; color: #555; margin-bottom: 12px;">
+            リソグラフや活版印刷の共有工房「IPRC」でDIY出版文化を直撃！ 帰国後に制作するリサーチZINEのインスピレーション源に。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 募集ポジション（求める役割） -->
+  <section>
+    <div class="sec-header">
+      <div class="tag magenta">CREW WANTED</div>
+      <h2 class="sec-title">募集する5名のクリエイター</h2>
+      <p style="font-size: 15px; color: #555; margin-top: 8px;">異なる専攻の強みを持ち寄り、1つの最強リサーチチームを結成します！</p>
+    </div>
+
+    <div class="grid-3">
+      <!-- Role 1 -->
+      <div class="pop-card">
+        <div class="role-num">01</div>
+        <div class="role-title">副リーダー / 進行・渉外</div>
+        <div class="role-task">担当：プロジェクト進捗管理・経理精査・PMバックアップ</div>
+        <div class="role-skills"><strong>歓迎スキル：</strong> 責任感、対話力、日常会話以上の英語力がある方優遇！</div>
+      </div>
+
+      <!-- Role 2 -->
+      <div class="pop-card">
+        <div class="role-num">02</div>
+        <div class="role-title">企画構想・コミュニティ担当</div>
+        <div class="role-task">担当：協賛企業向け提案書のドラフト・現地ヒアリング</div>
+        <div class="role-skills"><strong>求めるスキル：</strong> 企画書構成力、インタビュー意欲、論理的な文章力</div>
+      </div>
+
+      <!-- Role 3 -->
+      <div class="pop-card">
+        <div class="role-num">03</div>
+        <div class="role-title">建築環境デザイン担当</div>
+        <div class="role-task">担当：空間・都市リサーチ、図面スケッチ・建築レポート</div>
+        <div class="role-skills"><strong>求めるスキル：</strong> 建築構造・空間構成の分析力、図面やダイアグラムの図解力</div>
+      </div>
+
+      <!-- Role 4 -->
+      <div class="pop-card">
+        <div class="role-num">04</div>
+        <div class="role-title">グラフィック担当</div>
+        <div class="role-task">担当：リサーチZINE（報告冊子）のデザイン・編集統括</div>
+        <div class="role-skills"><strong>求めるスキル：</strong> Adobe Illustrator/InDesignの実務経験、印刷入稿経験</div>
+      </div>
+
+      <!-- Role 5 -->
+      <div class="pop-card">
+        <div class="role-num">05</div>
+        <div class="role-title">美術・映像担当</div>
+        <div class="role-task">担当：報告展の映像制作・スチール写真アーカイブ撮影</div>
+        <div class="role-skills"><strong>求めるスキル：</strong> 現場での写真/動画撮影経験、Premiere等の編集操作</div>
+      </div>
+
+      <!-- You? -->
+      <div class="pop-card" style="background: var(--lime); border-color: var(--charcoal);">
+        <div class="role-num" style="color: var(--charcoal);">06</div>
+        <div class="role-title">全体統括（PM）</div>
+        <div class="role-task" style="background:#fff;">中土井 陽太（企画構想2年）が担当</div>
+        <div class="role-skills" style="color: #222;">留学経験・英語対応・予算管理・展示企画実績をもとに全体をドライブします。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 費用と安心のバックアップ -->
+  <section>
+    <div class="impact-box">
+      <div class="impact-grid">
+        <div>
+          <span class="tag orange" style="margin-bottom: 12px;">NO WORRIES</span>
+          <h3 style="font-size: 28px; font-weight: 900; line-height: 1.3; margin-bottom: 14px;">
+            企業協賛で渡航費を大幅圧縮！<br>
+            自己負担 11万円目標。
+          </h3>
+          <p style="font-size: 14.5px; font-weight: 700; color: #222;">
+            通常24万円以上かかるアメリカ渡航ですが、地元企業からの協賛金獲得により、学生の負担を約11万円（LCC＋Airbnb一棟貸切自炊）に抑える仕組みを構築しています。
+          </p>
+        </div>
+        <div style="background:#fff; border: 3px solid #121314; padding: 24px; border-radius: 10px; box-shadow: 4px 4px 0 #121314;">
+          <h4 style="font-size: 16px; font-weight: 900; margin-bottom: 8px;">🛡️ 万全の安全管理体制</h4>
+          <ul style="font-size: 13px; padding-left: 18px; line-height: 1.9; color: #333;">
+            <li>海外旅行保険への全員一括加入必須</li>
+            <li>外務省「たびレジ」登録＆緊急連絡ホットライン</li>
+            <li>Airbnb一棟貸切・夜間単独行動の禁止</li>
+            <li>現地日系医療機関の事前リストアップ</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- スケジュール -->
+  <section>
+    <div class="sec-header">
+      <div class="tag">ROADMAP</div>
+      <h2 class="sec-title">選考〜渡航までのスケジュール</h2>
+    </div>
+
+    <div style="max-width: 720px; margin: 0 auto;">
+      <div class="timeline-step">
+        <div class="step-date">2026. 09</div>
+        <div>
+          <h4 style="font-size: 16px; font-weight: 900;">企画公開・オープンコール＆面談</h4>
+          <p style="font-size: 13px; color: #555;">エントリーシート提出後、カジュアルなオンライン/対面面談を実施！</p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="step-date">2026. 10</div>
+        <div>
+          <h4 style="font-size: 16px; font-weight: 900;">メンバー決定 ＆ 企業協賛アプローチ</h4>
+          <p style="font-size: 13px; color: #555;">選抜メンバー決定。チームで協賛企業への提案をスタート。</p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="step-date">2026. 11.30</div>
+        <div>
+          <h4 style="font-size: 16px; font-weight: 900;">渡航確定判定（デッドライン）</h4>
+          <p style="font-size: 13px; color: #555;">目標予算到達を確認し、航空券・Airbnbを正式予約！</p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="step-date">2026.12-2027.02</div>
+        <div>
+          <h4 style="font-size: 16px; font-weight: 900;">事前勉強会・現地アポ入れ</h4>
+          <p style="font-size: 13px; color: #555;">全4回の勉強会で訪問先の深掘り、現地取材のアポ入れを完了。</p>
+        </div>
+      </div>
+      <div class="timeline-step" style="background: var(--lime);">
+        <div class="step-date" style="background: var(--orange);">2027.02下-03上</div>
+        <div>
+          <h4 style="font-size: 18px; font-weight: 900;">✈️ ポートランド現地渡航リサーチ本番（5泊7日）</h4>
+          <p style="font-size: 13px; color: #222; font-weight: bold;">現場でしか得られない刺激を浴びまくる1週間！</p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="step-date">2027. 04</div>
+        <div>
+          <h4 style="font-size: 16px; font-weight: 900;">リサーチZINE発行 ＆ 学内・地域報告展</h4>
+          <p style="font-size: 13px; color: #555;">成果物を出版し、学内ギャラリー等で報告展示・トークイベントを開催！</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- CTA Entry Section -->
+<div class="cta-block">
+  <div class="container">
+    <div class="tag orange" style="margin-bottom: 16px;">ARE YOU READY?</div>
+    <h2 style="font-size: clamp(30px, 5vw, 48px); font-weight: 900; color: #fff; line-height: 1.2; margin-bottom: 16px;">
+      教室を出て、世界の現場へ飛び出そう。
+    </h2>
+    <p style="font-size: 16px; max-width: 620px; margin: 0 auto 10px; opacity: 0.9;">
+      専攻や学年の垣根を越えて、本気で刺激を受け合える仲間を待っています。<br>
+      少しでも気になった方は、まずはオープンコールへエントリーしてください！<br>
+      <br>
+      応募締め切り：9月30日 (水) 23:59
+    </p>
+    <a href="https://forms.gle/cbvnXBBvm1fG8Jrj8" class="btn-entry">⚡ メンバーに応募する（Googleフォーム）</a>
+    <div style="margin-top: 30px; font-size: 13px; opacity: 0.7;">
+      主催：東北芸術工科大学 ポートランド現地リサーチプロジェクト有志<br>
+      企画代表：中土井 陽太（企画構想学科2年）<br>
+      instagram:@nextworld._.2005  <br>
+      学内email: 2025ny69@stu.tuad.ac.jp
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
